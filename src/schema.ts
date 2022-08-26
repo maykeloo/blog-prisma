@@ -6,7 +6,7 @@ export const typeDefs = gql`
     }
 
     type Mutation {
-        postCreate(title: String!, content: String!, authorId: ID!): PostPayload!
+        postCreate(title: String!, content: String!, author: User!): PostPayload!
     }
 
     type Post {
@@ -21,7 +21,7 @@ export const typeDefs = gql`
     type User {
         id:         ID!
         email:      String!   
-        name:       String!    
+        name:       String!
         password:   String!
         createdAt:  String!   
         profile:    Profile!
