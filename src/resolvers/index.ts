@@ -1,2 +1,3 @@
 export * from './Query'
-export * from './Mutation'
+export * from './Mutation/post'
+export * from './Mutation/auth'
