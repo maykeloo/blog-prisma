@@ -4,6 +4,8 @@ export const typeDefs = gql`
     type Query {
         posts: [Post!]!
         post(postId: ID!): Post!
+        me: MePayload
+        profile(userId: ID!): ProfilePayload
     }
 
     type Mutation {
@@ -52,6 +54,18 @@ export const typeDefs = gql`
     type UserPayload {
         userErrors: [UserError!]!
         token: String
+    }
+
+    type MePayload {
+        userErrors: [UserError!]!
+        user:       User
+    }
+
+    type ProfilePayload {
+        userErrors: [UserError!]
+        id:         ID
+        bio:        String
+        user:       User
     }
 
     input SignUpInput {

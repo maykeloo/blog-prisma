@@ -3,7 +3,7 @@ import { User } from '.prisma/client'
 import validator from 'validator'
 import bcrypt from 'bcryptjs'
 import JWT from 'jsonwebtoken'
-import { JWT_SIGNATURE } from '../keys'
+import { JWT_SIGNATURE } from '../../keys'
 
 interface UserArgs {
     user: {
