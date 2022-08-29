@@ -17,10 +17,10 @@ const server = new ApolloServer({
     typeDefs,
     resolvers: {
         Query, 
-        Profile,
         Mutation,
         Post,
-        User
+        User,
+        Profile,
     },
     context: async ({ req }): Promise<Context> => {
         const { headers } = req
